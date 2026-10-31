@@ -2,6 +2,25 @@
 
 > ⚠️ **本仓库不是官方项目**，仅提供兼容性补丁。版权归原作者所有。
 
+## 基于哪个版本
+
+| 项 | 值 |
+|---|---|
+| 上游版本 | **v0.196.0** |
+| tag → commit | `d03b7dc8a6ebf9bd611c7e2dc91f3b35462deebc` |
+| CHANGELOG 日期 | 2026-10-19 |
+| 上游分支 | `beta` |
+| 原始 bundle.js | 611,598 字节 · SHA256 `A5D6166D43A78C7FAD05669864EFD76852F58EEA905814DCD89F8E1B29FA4B27` |
+| 本仓库 bundle.js | 612,438 字节 · SHA256 `005AC5D694218EAE1CE60A710950EFB15D4DB27B8827A010036375BDE55D8846` |
+
+> **上游一更新，本补丁就需要重新打。** 判断是否过期：看上游 bundle.js 的 SHA256
+> 是否还是 `A5D6166D…4B27`，变了就说明代码有改动。
+>
+> 核对命令：
+> ```bash
+> curl -s https://raw.githubusercontent.com/MagicalAstrogy/MagVarUpdate/beta/artifact/bundle.js | sha256sum
+> ```
+
 ## 来源
 
 | | |
@@ -9,7 +28,6 @@
 | 原作者 | MagicalAstrogy & StageDog |
 | 原项目 | https://github.com/MagicalAstrogy/MagVarUpdate |
 | 许可证 | MIT（见 [`LICENSE`](./LICENSE)） |
-| 基于 | `beta` 分支 · `artifact/bundle.js`（611,598 字节） |
 
 ## 为什么需要这个补丁
 
@@ -65,7 +83,7 @@ SyntaxError: Invalid regular expression: invalid group specifier name
 ## 使用
 
 ```
-https://cdn.jsdelivr.net/gh/<你的用户名>/<仓库名>@main/artifact/bundle.js
+https://cdn.jsdelivr.net/gh/Aoooooooo1/MagVarUpdate-iOS154Fix@main/artifact/bundle.js
 ```
 
 > ⚠️ 请勿使用 `raw.githubusercontent.com` —— 那边返回 `Content-Type: text/plain`，
@@ -79,6 +97,7 @@ https://cdn.jsdelivr.net/gh/<你的用户名>/<仓库名>@main/artifact/bundle.j
 | 正则等价性（含 fuzz） | 0 失败 |
 | 垫片功能测试 | 15 / 15 通过 |
 | iOS 15.4 兼容性复查 | 0 解析期致命 / 0 运行时阻断 |
+| jsDelivr 返回 | `application/javascript` + CORS ✅ |
 
 ## 第三方声明
 
